@@ -16,9 +16,9 @@ indicator(title="RS Rating for Indian Market", shorttitle="RS Rating", overlay=t
 hideRSRat   = input(false, title="Hide Rating", group = "Parameters", inline="0")
 // seedetail   = input(false, title="Display the 3 results", group = "Parameters", inline="0")
 src         = close
-comparativeTickerId = input("SP:SPX", title="Comparative Symbol", group = "Parameters", tooltip = "Reference ticker used for calculation of the RS Line and RS Score.")
+comparativeTickerId = input("NSE:NIFTY", title="Comparative Symbol", group = "Parameters", tooltip = "Reference ticker used for calculation of the RS Line and RS Score.")
 compareagainstall   = input(true, title="Indian or other market mod", group = "Parameters", tooltip = "This way you can use this indicator with US or Indian Market. Check the box for Indian Market and Uncheck for US Market.")
-SpxValue    = 3900//input(4140, title="Value of Comparative Symbol", group = "Parameters", tooltip = "Used to display the RS Line under the price. If you modify the ticker, please report its value in this box.")
+SpxValue    = input(22003, title="Value of Comparative Symbol", group = "Parameters", tooltip = "Used to display the RS Line under the price. If you modify the ticker, please report its value in this box.")
 offset      = input.int(80, minval = 0, maxval = 300, title="Offset of the line", group = "Parameters", tooltip = "Used to display the RS Line under the price.")
 colorRS     = input(color.rgb(0, 0, 255,0), title = "Color of RS Line & Rating", group = "Parameters")
 plotNewHigh = input(false, title = "Plot RS New Highs", group = "RS Line New High")
